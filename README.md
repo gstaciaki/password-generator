@@ -1,6 +1,6 @@
-# password-generator
+# Wireframe
 
-
+https://www.figma.com/file/3kJKszHBhxdvMal2AvmNhv/web2?node-id=0%3A1&t=mOXAjq1NXhLLCc1a-1
 
 # Checkist
 
