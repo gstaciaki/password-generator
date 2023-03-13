@@ -6,14 +6,14 @@ https://www.figma.com/proto/3kJKszHBhxdvMal2AvmNhv/web2?node-id=1%3A2&scaling=mi
 
 Caixas de Diálogo
 
-- [x] prompt
-- [x] alert
-- [x] confirm
+- [ ] prompt
+- [ ] alert
+- [ ] confirm
 
 Temporizadores
 
-- [x] setInterval
-- [x] setTimeout
+- [ ] setInterval
+- [ ] setTimeout
 
 Funções
 
@@ -28,8 +28,8 @@ Funções
 
 Eventos
 
-- [x] Evento de carregamento do documento - onload
-- [ ] Evento de movimento do mouse
+- [ ] Evento de carregamento do documento - onload
+- [X] Evento de movimento do mouse
 - [ ] Evento de teclado - usar charCode ou keyCode
 - [ ] Eventos de formulário - onfocus e onblur
 - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
@@ -38,7 +38,7 @@ Eventos
 Acesso aos elementos DOM do HTML
 
 - [ ] Via referência DOM pelo id do elemento HTML
-- [ ] Via getElementByID()
+- [X] Via getElementByID()
 - [ ] Via getElementsByName()
 - [ ] Via getElementsByTagName()
 - [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
