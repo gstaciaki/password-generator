@@ -14,8 +14,11 @@ const overlay = document.querySelector('.blur')
 //overlay.style.display = 'none'
 
 function warning() {
-  alert('Por questoes de seguranca, bloqueamos a senha caso tenha deixado a pagina aberta')
-  if (confirm('Deseja continuar na pagina?')) overlay.style.display = 'none'
+  alert('Por questoes de seguranca, escondemos a senha caso tenha deixado a pagina aberta')
+  if (confirm('Deseja continuar na pagina?')) {
+    overlay.style.display = 'none'
+    setTimeout(blur, 30000)
+  }
   else window.location.href = 'passwords-list.html'
 }
 
