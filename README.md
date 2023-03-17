@@ -7,7 +7,7 @@ https://www.figma.com/proto/3kJKszHBhxdvMal2AvmNhv/web2?node-id=1%3A2&scaling=mi
 Caixas de Diálogo
 
 - [ ] prompt
-- [ ] alert
+- [X] alert
 - [ ] confirm
 
 Temporizadores
@@ -17,19 +17,19 @@ Temporizadores
 
 Funções
 
-- [ ] Função anônima com argumento
-- [ ] Função anônima sem argumento
-- [ ] Função anônima com retorno
+- [X] Função anônima com argumento
+- [X] Função anônima sem argumento
+- [X] Função anônima com retorno
 - [ ] Função auto-executável
-- [ ] Função com nome
-- [ ] Função aninhada/local - declarar uma função dentro de outra
+- [X] Função com nome
+- [X] Função aninhada/local - declarar uma função dentro de outra
 - [ ] Passagem de uma função como parâmetro
-- [ ] Função Flecha - Arrow Function
+- [X] Função Flecha - Arrow Function
 
 Eventos
 
-- [ ] Evento de carregamento do documento - onload
-- [X] Evento de movimento do mouse
+- [X] Evento de carregamento do documento - onload
+- [ ] Evento de movimento do mouse
 - [ ] Evento de teclado - usar charCode ou keyCode
 - [ ] Eventos de formulário - onfocus e onblur
 - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
@@ -37,11 +37,11 @@ Eventos
 
 Acesso aos elementos DOM do HTML
 
-- [ ] Via referência DOM pelo id do elemento HTML
+- [X] Via referência DOM pelo id do elemento HTML
 - [X] Via getElementByID()
-- [ ] Via getElementsByName()
+- [X] Via getElementsByName()
 - [ ] Via getElementsByTagName()
-- [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
+- [X] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 Tratadores de Evento
 
@@ -53,14 +53,14 @@ Tratadores de Evento
 Objetos Nativos
 
 - [ ] Usar pelo menos 3 métodos de manipulação de array
-- [ ] Usar laço de repetição (for..in ou for..of ou forEach)
+- [X] Usar laço de repetição (for..in ou for..of ou forEach)
 - [ ] Usar pelo menos 3 métodos para manipulação de string
 - [ ] String Template
 
 Objetos
 
 - [ ] Criar objeto usando função construtora ou notação literal
-- [ ] Criar objetos a partir da definição de classes do ES6
+- [X] Criar objetos a partir da definição de classes do ES6
 - [ ] Usar herança prototipal nativa ou herança de classes do ES6
 
 Qualidade do código
@@ -77,9 +77,9 @@ Formulário
 
 - [ ] Validação de formulário com onsubmit usando os métodos tradicionais
 - [ ] Validação de formulário com HTML5 API
-  - [ ] Customizar as mensagens nos balões de mensagem
-  - [ ] Usar os atributos de validação dos inputs
-  - [ ] Usar expressões regulares
+- [ ] Customizar as mensagens nos balões de mensagem
+- [ ] Usar os atributos de validação dos inputs
+- [ ] Usar expressões regulares
 - [ ] Ler e escrever em elementos input com a propriedade value
 - [ ] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select

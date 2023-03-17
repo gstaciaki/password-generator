@@ -18,11 +18,11 @@
     <!-- Cria a barra de navegação -->
     <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary">
         <a class="navbar-brand" href="passwords-list.html"><img src="../img/logo.png" alt="Logo do site" width="150"></a>
-        <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar"
+            aria-controls="nav-bar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="passwords-list.html">INÍCIO</span></a>
@@ -38,10 +38,10 @@
         <div class="login-section">
             <img src="../img/logo.png" alt="Logo do site" width="150">
             <div>
-                <input type="email" class="login-input" placeholder="Endereço de email">
+                <input name="email-input" type="email" class="login-input" placeholder="Endereço de email">
             </div>
             <div>
-                <input type="password" class="login-input" placeholder="Senha mestre">
+                <input id="password-input" type="password" class="login-input" placeholder="Senha mestre">
             </div>
             <button id="login-button" class="login-button">LOGIN</button>
             <div>
