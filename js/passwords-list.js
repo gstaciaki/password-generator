@@ -31,21 +31,12 @@ function createBlock(title_content, email_content) {
   main_div.appendChild(new_link)
 }
 
-const passwords = [
-  {
-    title: 'Netflix',
-    email: 'exemplo@netflix.com'
-  },
-  {
-    title: 'Amazon',
-    email: 'exemplo@amazon.com'
-  }
-]
+const passwords = JSON.parse(localStorage.getItem('passwords'))
 
 //evento de carregamento de pag onload
 window.onload = () => {
   //laço foreach
   passwords.forEach(element => {
-    createBlock(element.title, element.email)
+    createBlock(element.password_title, element.password_email)
   })
 }

@@ -18,18 +18,4 @@ class Password {
     get password() {
         return this.password
     }
-
-    generate_password() {
-        let pass = ''
-        const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-
-        for(let i = 0; i < 10; i++) {
-            pass += chars[Math.floor((Math.random() * 62) + 1)]
-        }
-
-        return pass
-    }
-
 }
-
-export default Password

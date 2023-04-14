@@ -38,5 +38,16 @@ const descriptionData = document.getElementById('textarea-description-id')
 const generateButton = document.getElementById('generate-button')
 
 generateButton.addEventListener('click', () => {
-    registerPassword(titleData.value, emailData.value, descriptionData.value)
-})
+    if(!titleData.value || !emailData.value || !descriptionData.value) {
+        alert('Existe campos vazios')
+        return
+    }
+    const newPassword = registerPassword(titleData.value, emailData.value, descriptionData.value)
+    let passwords = JSON.parse(localStorage.getItem('passwords'))
+
+    if(!passwords) passwords = []
+    passwords.push(newPassword) 
+    localStorage.setItem('passwords', JSON.stringify(passwords))
+
+    window.location.href = 'passwords-list.html' 
+})  

@@ -9,10 +9,6 @@ navButton.addEventListener('click', function () {
 
 const overlay = document.querySelector('.blur')
 
-//overlay.style.display = 'block'
-
-//overlay.style.display = 'none'
-
 function warning() {
   alert('Por questoes de seguranca, escondemos a senha caso tenha deixado a pagina aberta')
   if (confirm('Deseja continuar na pagina?')) {
@@ -27,4 +23,5 @@ const blur = function () {
   setTimeout(warning, 100)
 }
 
+//uso do setTimeout
 setTimeout(blur, 5000)
