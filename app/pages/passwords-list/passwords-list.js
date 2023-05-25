@@ -1,19 +1,18 @@
 const navButton = document.getElementById('nav-toggler-button')
 const navCollapse = document.getElementById('navbarNav')
 
-
 navButton.addEventListener('click', function () {
   navCollapse.classList.toggle('show')
 })
 
 //funcao com nome
-function createBlock(title_content, email_content) {
+function createBlock(title_content, email_content, id) {
   //acesso DOM via querySelector
   let main_div = document.querySelector('.main')
   let new_div = document.createElement('div')
   let new_link = document.createElement('a')
 
-  new_link.setAttribute('href', 'password.html')
+  new_link.setAttribute('href', `../../pages/password/password.html?id=${id}`)
 
   new_link.classList.add('block-link')
   new_div.classList.add('block')
@@ -37,6 +36,6 @@ const passwords = JSON.parse(localStorage.getItem('passwords'))
 window.onload = () => {
   //laço foreach
   passwords.forEach(element => {
-    createBlock(element.password_title, element.password_email)
+    createBlock(element.title, element.email, element.id)
   })
 }

@@ -6,19 +6,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Adiciona o Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/register-account-style.css">
+    <link rel="stylesheet" href="../../../assets/resources/styles/register-account-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
 </head>
 
 <body>
-
-    <!-- Cria a barra de navegação -->
     <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary">
-        <a class="navbar-brand" href="passwords-list.html"><img src="../img/logo.png" alt="Logo do site"
+        <a class="navbar-brand" href="passwords-list.html"><img src="../../../assets/resources/images/logo.png" alt="Logo do site"
                 width="150"></a>
         <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +23,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="passwords-list.html">INÍCIO</span></a>
+                    <a class="nav-link" href="/app/pages/passwords-list/passwords-list.html">INÍCIO</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="register-password.html">CADASTRAR SENHA</a>
+                    <a class="nav-link" href="/app/pages/register-password/register-password.html">CADASTRAR SENHA</a>
                 </li>
             </ul>
         </div>
@@ -38,7 +34,7 @@
 
     <div class="container login-container">
         <div class="login-section">
-            <img src="../img/logo.png" alt="Logo do site" width="150">
+            <img src="../../../assets/resources/images/logo.png" alt="Logo do site" width="150">
             <div>
                 <input type="text" class="login-input" placeholder="Nome">
             </div>
@@ -56,13 +52,13 @@
             </div>
             <button id="register-button" class="login-button">CRIAR CONTA</button>
             <div>
-                OU <a href="index.html" class="create-account">FAZER LOGIN</a>
+                OU <a href="../../../index.html" class="create-account">FAZER LOGIN</a>
             </div>
         </div>
 
     </div>
 
-    <script type="module" src="../js/register-account.js"></script>
+    <script type="module" src="register-account.js"></script>
 </body>
 
 </html>

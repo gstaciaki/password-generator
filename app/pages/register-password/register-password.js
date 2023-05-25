@@ -15,7 +15,7 @@ const registerPassword = function (title, email, description) {
         let pass = ''
         const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 20; i++) {
             pass += chars[Math.floor((Math.random() * 62) + 1)]
         }
 
@@ -24,10 +24,11 @@ const registerPassword = function (title, email, description) {
 
     //anonima com retorno
     return {
-        password_title: title,
-        password_email: email,
-        password_description: description,
-        pass: generatePassword()
+        title: title,
+        email: email,
+        description: description,
+        pass: generatePassword(),
+        id: `${btoa(title)}${btoa(email)}`
     }
 }
 
@@ -49,5 +50,5 @@ generateButton.addEventListener('click', () => {
     passwords.push(newPassword) 
     localStorage.setItem('passwords', JSON.stringify(passwords))
 
-    window.location.href = 'passwords-list.html' 
+    window.location.href = '/app/pages/passwords-list/passwords-list.html' 
 })  

@@ -7,7 +7,7 @@ navButton.addEventListener('click', function() {
   navCollapse.classList.toggle('show');
 });
 
-import { User } from "../js/user.js";
+import { User } from "../../model/user.js";
 
 const userValues = document.querySelectorAll('.login-input')
 
@@ -23,5 +23,5 @@ registerButton.addEventListener('click', () => {
   )))
   let code = prompt('Informe o código enviado ao seu celular')
 
-  if(code == '123456') window.location.href = 'passwords-list.html'
+  if(code == '123456') window.location.href = '../passwords-list/passwords-list.html'
 })
