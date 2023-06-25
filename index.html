@@ -15,11 +15,11 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary">
-    <a class="navbar-brand" href="passwords-list.html">
-      <img src=".../../../assets/resources/images/logo.png" alt="Logo do site" width="150">
-    </a>
-    <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse"
-      data-target="#nav-bar" aria-controls="nav-bar" aria-expanded="false" aria-label="Toggle navigation">
+
+    <img onclick="redirectPage(this)" src=".../../../assets/resources/images/logo.png" alt="Logo do site" width="150">
+
+    <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar"
+      aria-controls="nav-bar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav-bar">
@@ -50,6 +50,14 @@
     </div>
 
   </div>
+  <div id="alert-box" class="alert-box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function redirectPage(element) {
+      (getComputedStyle(element).backgroundColor !== 'rgb(0, 0, 0)') ? element.style.backgroundColor = 'black' : element.style.backgroundColor = 'white';
+    }
+  </script>
   <script src="index.js"></script>
 </body>
 

@@ -1,5 +1,8 @@
 'use strict';
 
+if (!localStorage.getItem('loged')) window.location.href = '/index.html';
+
+const url = 'http://localhost:3000/passwords'
 const navButton = document.getElementById('nav-toggler-button');
 const navCollapse = document.getElementById('navbarNav');
 
@@ -41,16 +44,28 @@ const descriptionData = document.getElementById('textarea-description-id');
 const generateButton = document.getElementById('generate-button');
 
 generateButton.addEventListener('click', () => {
-    if(!titleData.value || !emailData.value || !descriptionData.value) {
+    if (!titleData.value || !emailData.value || !descriptionData.value) {
         alert('Existe campos vazios');
         return;
     }
-    const newPassword = registerPassword(titleData.value, emailData.value, descriptionData.value);
-    let passwords = JSON.parse(localStorage.getItem('passwords'));
+    const title = titleData.value.slice(0, 1).slice(0, 1).toUpperCase() + titleData.value.slice(1)
+    const newPassword = registerPassword(title, emailData.value, descriptionData.value);
+    // let passwords = JSON.parse(localStorage.getItem('passwords'));
 
-    if(!passwords) passwords = [];
-    passwords.push(newPassword) ;
-    localStorage.setItem('passwords', JSON.stringify(passwords));
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newPassword)
+    })
+        .then(data => { })
+        .catch(error => {
+            alert(`Erro ao cadastrar senha. Erro: ${error}`)
+        })
+    // if (!passwords) passwords = [];
+    // passwords.push(newPassword);
+    // localStorage.setItem('passwords', JSON.stringify(passwords));
 
     window.location.href = '/app/pages/passwords-list/passwords-list.html';
 });

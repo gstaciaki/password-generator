@@ -1,5 +1,8 @@
 'use strict';
 
+if (!localStorage.getItem('loged')) window.location.href = '/index.html';
+
+const url = 'http://localhost:3000/passwords'
 const navButton = document.getElementById('nav-toggler-button');
 const navCollapse = document.getElementById('navbarNav');
 
@@ -32,12 +35,24 @@ function createBlock(title_content, email_content, id) {
   main_div.appendChild(new_link);
 }
 
-const passwords = JSON.parse(localStorage.getItem('passwords'));
 
 //evento de carregamento de pag onload
 window.onload = () => {
   //laço foreach
-  passwords.forEach(element => {
-    createBlock(element.title, element.email, element.id);
-  });
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(element => {
+        createBlock(element.title, element.email, element.id);
+      });
+    })
+    .catch(error => {
+      console.log(error);
+    })
 };
+
+const submitButton = document.getElementById('submit-button')
+
+submitButton.onclick = () => {
+  alert('Teste')
+}

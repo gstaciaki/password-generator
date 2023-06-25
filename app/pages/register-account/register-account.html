@@ -34,7 +34,7 @@
     <div class="container login-container">
         <div class="login-section">
             <img src="../../../assets/resources/images/logo.png" alt="Logo do site" width="150">
-            <form onsubmit="return validateForm()">
+            <form>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Nome" required
                         oninvalid="setCustomValidity('Por favor, preencha o campo de nome.')"
@@ -68,6 +68,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/libraries/jquery/jquery.mask.js"></script>
     <script type="module" src="register-account.js"></script>
 </body>
 
