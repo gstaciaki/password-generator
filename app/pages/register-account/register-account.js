@@ -10,10 +10,14 @@ navButton.addEventListener('click', function () {
 
 import { User } from "../../model/user.js";
 
-// const userValues = Array.from(document.querySelectorAll('.form-control'));
 $(document).ready(function () {
   $('.form-control[placeholder="CPF"]').mask('000.000.000-00');
 });
+
+$(document).ready(function () {
+  $('.form-control[placeholder="Número de Telefone"]').mask('(00) 00000-0000');
+});
+
 const userValues = ($('.form-control').children()).prevObject;
 
 
@@ -28,22 +32,21 @@ registerButton.addEventListener('click', () => {
     userValues[3].value,
     userValues[4].value
   );
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  })
-    .then(response => response.json())
-    .then(data => {
+
+  $.ajax({
+    url: url,
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(payload),
+    success: function () {
       code = prompt('Informe o código enviado ao seu celular');
-    })
-    .catch(error => {
-      alert(`Erro ao registrar: ${error}`)
-    });
+    },
+    error: function (error) {
+      alert(`Erro ao registrar: ${error}`);
+    }
+  });
 
   if (code === '123') {
-    window.location.replace('../passwords-list/passwords-list.html');
+    window.location.href('../passwords-list/passwords-list.html')
   };
 });

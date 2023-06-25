@@ -38,17 +38,19 @@ function createBlock(title_content, email_content, id) {
 
 //evento de carregamento de pag onload
 window.onload = () => {
-  //laço foreach
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
+
+  $.ajax({
+    url: url,
+    type: 'GET',
+    success: function (data) {
       data.forEach(element => {
         createBlock(element.title, element.email, element.id);
       });
-    })
-    .catch(error => {
-      console.log(error);
-    })
+    },
+    error: function (error) {
+
+    }
+  });
 };
 
 const submitButton = document.getElementById('submit-button')

@@ -10,28 +10,22 @@ const url = 'http://localhost:3000/users';
 })();
 
 // acessando os elementos por getElementById()
-// const navButton = document.getElementById('nav-toggler-button');
-// const navCollapse = document.getElementById('nav-bar');
 $(document).ready(function () {
   $('.navbar-toggler').click(function () {
     $('#nav-bar').toggleClass('show');
   });
 });
 
+$.ajax({
+  url: url,
+  type: 'GET',
+  success: function (data) {
+    arrayMails = data.map(obj => { return { email: obj.email, password: obj.passwordMaster } });
+  },
+  error: function (error) {
 
-// navButton.addEventListener('click', function () {
-//   navCollapse.classList.toggle('show');
-// });
-
-// const user = JSON.parse(localStorage.getItem('user'));
-// função anônima sem argumento
-// tratador de evento da forma tradicional
-
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    arrayMails = data.map(obj => { return { email: obj.email, password: obj.passwordMaster } })
-  })
+  }
+});
 
 document.getElementById('login-button').onclick = function () {
   // acessando elemento por getElementsByName()

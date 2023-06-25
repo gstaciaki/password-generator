@@ -50,22 +50,17 @@ generateButton.addEventListener('click', () => {
     }
     const title = titleData.value.slice(0, 1).slice(0, 1).toUpperCase() + titleData.value.slice(1)
     const newPassword = registerPassword(title, emailData.value, descriptionData.value);
-    // let passwords = JSON.parse(localStorage.getItem('passwords'));
 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
+    $.ajax({
+        url: url,
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(newPassword),
+        success: function () {
+            window.location.href = '/app/pages/passwords-list/passwords-list.html';
         },
-        body: JSON.stringify(newPassword)
-    })
-        .then(data => { })
-        .catch(error => {
-            alert(`Erro ao cadastrar senha. Erro: ${error}`)
-        })
-    // if (!passwords) passwords = [];
-    // passwords.push(newPassword);
-    // localStorage.setItem('passwords', JSON.stringify(passwords));
-
-    window.location.href = '/app/pages/passwords-list/passwords-list.html';
+        error: function (error) {
+            alert('Erro ao cadastrar senha. Erro: ' + error);
+        }
+    });
 });

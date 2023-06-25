@@ -33,22 +33,22 @@ window.onload = () => {
   let passInfo;
   const paramId = param.get('id');
 
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', `${url}/${paramId}`, true);
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      passInfo = JSON.parse(xhr.responseText);
+  $.ajax({
+    url: `${url}/${paramId}`,
+    type: 'GET',
+    success: function (data) {
+      passInfo = data
       let childElements = $('.register-section').children().children();
 
       childElements[0].textContent = passInfo.title;
       $('#password-email').html(passInfo.email);
       childElements[2].value = passInfo.pass;
       childElements[3].textContent = passInfo.description;
+    },
+    error: function (error) {
+      
     }
-  };
-
-  xhr.send();
+  });
 };
 
 const passwordInput = document.getElementById('password-content');

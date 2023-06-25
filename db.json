@@ -79,6 +79,14 @@
       "cpf": "12345678912",
       "phone": "21345465768798",
       "id": 10
+    },
+    {
+      "name": "Usuario Teste",
+      "email": "usuario@email.com",
+      "passwordMaster": "123456789",
+      "cpf": "999.999.999-99",
+      "phone": "(99) 99999-9999",
+      "id": 11
     }
   ],
   "passwords": [
@@ -102,6 +110,20 @@
       "description": "Senha para o facebook. Tomar cuidado com esta senha, pois caso seja perdida, perdemo",
       "pass": "GeozPIE34NzWHxSCblck",
       "id": "RmFjZWJvb2s=ZW1haWxAZXhlbXBsby5jb20="
+    },
+    {
+      "title": "Google",
+      "email": "email@google.com",
+      "description": "Teste 123",
+      "pass": "u4EmtDtIMylXy4pGYfEJ",
+      "id": "R29vZ2xlZW1haWxAZ29vZ2xlLmNvbQ=="
+    },
+    {
+      "title": "Instagram",
+      "email": "email@instagram.com",
+      "description": "Senha do instagram",
+      "pass": "ry4KuxO6N5IEp20g1fM1",
+      "id": "SW5zdGFncmFtZW1haWxAaW5zdGFncmFtLmNvbQ=="
     }
   ]
 }
