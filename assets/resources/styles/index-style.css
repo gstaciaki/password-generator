@@ -98,3 +98,13 @@ body {
 .create-account:hover {
     text-decoration: underline;
 }
+
+.alert-box {
+    position: fixed;
+    top: 80%;
+    right: 20px;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    display: none;
+}

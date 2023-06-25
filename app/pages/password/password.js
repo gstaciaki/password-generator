@@ -1,5 +1,6 @@
 'use strict';
 
+const url = 'http://localhost:3000/passwords';
 const navButton = document.getElementById('nav-toggler-button');
 const navCollapse = document.getElementById('navbarNav');
 
@@ -32,14 +33,31 @@ window.onload = () => {
   let passInfo;
   const paramId = param.get('id');
 
-  JSON.parse(localStorage.getItem('passwords')).forEach((password) => {
-    if (password.id === paramId) {
-      passInfo = password;
-    }
-  });
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', `${url}/${paramId}`, true);
 
-  document.getElementById('password-title').textContent = passInfo.title;
-  document.getElementById('password-email').textContent = passInfo.email;
-  document.getElementById('password-content').value = passInfo.pass;
-  document.getElementById('password-description').textContent = passInfo.description;
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      passInfo = JSON.parse(xhr.responseText);
+      let childElements = $('.register-section').children().children();
+
+      childElements[0].textContent = passInfo.title;
+      $('#password-email').html(passInfo.email);
+      childElements[2].value = passInfo.pass;
+      childElements[3].textContent = passInfo.description;
+    }
+  };
+
+  xhr.send();
 };
+
+const passwordInput = document.getElementById('password-content');
+$('#password-content').addClass('cover');
+
+$('#password-content').on('mouseover', () => {
+  $('#password-content').removeClass('cover');
+});
+
+$('#password-content').on('mouseout', () => {
+  $('#password-content').addClass('cover');
+});

@@ -12,7 +12,7 @@ Caixas de Diálogo
 
 Temporizadores
 
-- [ ] setInterval
+- [X] setInterval
 - [X] setTimeout
 
 Funções
@@ -23,37 +23,37 @@ Funções
 - [X] Função auto-executável - não será aceita a mesma do Module Pattern
 - [X] Função com nome
 - [X] Função aninhada/local - declarar uma função dentro de outra
-- [ ] Passagem de uma função como parâmetro para outra função - ambas as funções precisam ser implementadas pelo aluno
+- [X] Passagem de uma função como parâmetro para outra função - ambas as funções precisam ser implementadas pelo aluno
 - [X] Função Flecha - Arrow Function
 
 Eventos
 
 - [X] Evento de carregamento do documento - onload
-- [ ] Evento de movimento do mouse
-- [ ] Evento de teclado - usar charCode ou keyCode
+- [X] Evento de movimento do mouse
+- [X] Evento de teclado - usar charCode ou keyCode
 - [X] Eventos de formulário - onfocus e onblur
-- [ ] Imprimir alguma propriedade/atributo do objeto event recebido como parâmetro na função tratadora de evento
+- [X] Imprimir alguma propriedade/atributo do objeto event recebido como parâmetro na função tratadora de evento
 
 Acesso aos elementos DOM do HTML
 
 - [X] Via referência DOM pelo id do elemento HTML - acesso sem uso do getElementByID ou querySelector, o id do objeto DOM é o próprio nome da variável
 - [X] Via getElementByID()
 - [X] Via getElementsByName()
-- [ ] Via getElementsByTagName()
+- [X] Via getElementsByTagName()
 - [X] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 Tratadores de Evento
 
-- [ ] Especificar o tratador de evento inline - registro do evento no HTML
-- [ ] Especificar o tratador de evento no modo tradicional - registro do evento no JS com prefixo on via atributo de um objeto DOM
+- [X] Especificar o tratador de evento inline - registro do evento no HTML
+- [X] Especificar o tratador de evento no modo tradicional - registro do evento no JS com prefixo on via atributo de um objeto DOM
 - [X] Especificar o tratador de evento com a função addEventListener - registro do evento no JS
-- [ ] Usar o operador this em funções tratadoras de eventos.
+- [X] Usar o operador this em funções tratadoras de eventos.
 
 Objetos Nativos
 
-- [ ] Usar pelo menos 3 métodos de manipulação de array
+- [X] Usar pelo menos 3 métodos de manipulação de array
 - [X] Usar laço de repetição (for..in ou for..of ou forEach)
-- [ ] Usar pelo menos 3 métodos para manipulação de string
+- [X] Usar pelo menos 3 métodos para manipulação de string
 - [X] String Template - a String com crase e ${}
 - [X] Manipulação do CSS de forma nativa via atributo style e classList
 
@@ -75,7 +75,7 @@ Qualidade do código
 
 Formulário
 
-- [ ] Validação de formulário com onsubmit usando os métodos tradicionais - é a fase executada após a validação via HTML5
+- [X] Validação de formulário com onsubmit usando os métodos tradicionais - é a fase executada após a validação via HTML5
 - [X] Validação de formulário com HTML5 API
 - [X] Customizar as mensagens nos balões de mensagem
 - [X] Usar os atributos de validação dos inputs - required ou type="email" ou outros
@@ -85,3 +85,26 @@ Formulário
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
 - [ ] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
 
+
+jQuery
+
+- [X] Uso de seletores CSS - id, classe e tag
+- [X] Uso de seletores CSS hierárquicos estáticos - ancestral/descendente, pai/filho, anterior/próximo
+- [X] Uso de seletores hierárquicos dinâmicos, ou seja, via métodos do JQuery - parent/children/next
+- [X] Efeitos fade ou slide
+- [X] Especificar o tratador de algum evento para um elemento DOM via jQuery - deve ser um evento diferente do ready
+- [X] Manipulação do CSS via função css() e addClass() ou removeClass()
+- [X] Manipulação do conteúdo de um input e div usando jQuery
+- [X] Aplicar um plugin do jQuery (por exemplo, jQuery Mask Plugin)
+
+Web Storage - LocalStorage ou SessionStorage
+
+- [X] Leitura e escrita de dados simples - dados primivos como string, number, boolean
+- [X] Leitura e escrita de JSON - dado transformado a partir de um objeto
+- [ ] Criar e guardar um dado em um Cookie
+
+Requisições assíncronas
+
+- [ ] Requisições AJAX para uma implementação funcional do backend em ExpressJS na plataforma Node
+- [X] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
+- [ ] Requisições AJAX para uma API Rest pública qualquer (Busca CEP API ou IBGE API ou outra).
