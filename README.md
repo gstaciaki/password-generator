@@ -1,3 +1,7 @@
+# Github Pages
+
+https://gstaciaki.github.io/password-generator
+
 # Wireframes
 
 https://www.figma.com/proto/3kJKszHBhxdvMal2AvmNhv/web2?node-id=1-2&starting-point-node-id=1%3A2
