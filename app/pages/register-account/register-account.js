@@ -8,7 +8,7 @@ navButton.addEventListener('click', function () {
   navCollapse.classList.toggle('show');
 });
 
-import { User } from "../../model/user.js";
+import { User } from "https://gstaciaki.github.io/password-generator/model/user.js";
 
 $(document).ready(function () {
   $('.form-control[placeholder="CPF"]').mask('000.000.000-00');
@@ -47,6 +47,6 @@ registerButton.addEventListener('click', () => {
   });
 
   if (code === '123') {
-    window.location.href('../passwords-list/passwords-list.html')
+    window.location.href('https://gstaciaki.github.io/password-generator/passwords-list/passwords-list.html')
   };
 });

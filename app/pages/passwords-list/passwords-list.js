@@ -1,6 +1,6 @@
 'use strict';
 
-if (!localStorage.getItem('loged')) window.location.href = '/index.html';
+if (!localStorage.getItem('loged')) window.location.href = 'https://gstaciaki.github.io/password-generator';
 
 const url = 'http://localhost:3000/passwords'
 const navButton = document.getElementById('nav-toggler-button');
@@ -17,7 +17,7 @@ function createBlock(title_content, email_content, id) {
   let new_div = document.createElement('div');
   let new_link = document.createElement('a');
 
-  new_link.setAttribute('href', `../../pages/password/password.html?id=${id}`);
+  new_link.setAttribute('href', `https://gstaciaki.github.io/password-generator/pages/password/password.html?id=${id}`);
 
   new_link.classList.add('block-link');
   new_div.classList.add('block');

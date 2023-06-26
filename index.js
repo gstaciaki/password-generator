@@ -36,7 +36,7 @@ document.getElementById('login-button').onclick = function () {
 
   arrayMails.forEach(user => {
     if (user.email == email && user.password == password) {
-      window.location.href = '/app/pages/passwords-list/passwords-list.html';
+      window.location.href = 'https://gstaciaki.github.io/password-generator/app/pages/passwords-list/passwords-list.html';
       loged = true;
       const logedAtTime = {
         date: new Date(),

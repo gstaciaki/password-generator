@@ -57,7 +57,7 @@ generateButton.addEventListener('click', () => {
         contentType: 'application/json',
         data: JSON.stringify(newPassword),
         success: function () {
-            window.location.href = '/app/pages/passwords-list/passwords-list.html';
+            window.location.href = 'https://gstaciaki.github.io/password-generator/app/pages/passwords-list/passwords-list.html';
         },
         error: function (error) {
             alert('Erro ao cadastrar senha. Erro: ' + error);
