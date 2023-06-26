@@ -16,7 +16,7 @@ function warning() {
     overlay.style.display = 'none';
     setTimeout(applyBlur, 30000);
   } else {
-    window.location.href = 'https://gstaciaki.github.io/password-generator/passwords-list/passwords-list.html';
+    window.location.href = 'https://gstaciaki.github.io/password-generator/app/pages/passwords-list/passwords-list.html';
   }
 }
 
